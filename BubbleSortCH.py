@@ -14,6 +14,6 @@ def Bubble(a):
     
     print("Final sorted string", *a, "  n =",len(a));
 
-print("Charlie Hoffmann BubbleSort");
+print("Charley Hoffmann BubbleSort");
 a=eval(input("Enter a list of numbers(ex. '[1,5,3,7,4]') "));
 Bubble(a);

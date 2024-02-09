@@ -1,5 +1,5 @@
 # NumericalMethods
-
+Various root finding, curve fitting, and integration techniques programmed in python 
 
 BaseCH : converts a number in base 10 to any base
 

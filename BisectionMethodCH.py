@@ -33,7 +33,7 @@ def bis(f,a,b,t,i):
 
 
 i=1;
-print("Charlie Hoffmann BisectionMethod");
+print("Charley Hoffmann BisectionMethod");
 f=input("Input a function of x: ")
 a=eval(input("Left Endpoint: "))
 b=eval(input("Right Endpoint: "))

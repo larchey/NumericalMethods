@@ -1,4 +1,4 @@
-#Charlie Hoffmann
+#Charley Hoffmann
 #DividedDifference.py 
 #Graphing commands for students.
 #Goal: Enter data, graph the data.
@@ -13,7 +13,7 @@ from graphics import *
 
 
 def getheading():
-    print ("Divided Difference Interpolatory Polynomial by Charlie Hoffmann")
+    print ("Divided Difference Interpolatory Polynomial by Charley Hoffmann")
     print("This program has the user enter data points.")
     print("It computes the Lagrange Polynomial through those points")
     print ("and graphs the points and the polynomial.")
@@ -46,7 +46,7 @@ def coordsystemSize(abscissa,ordinate):
     return xmin,xmax,delx,ymin,ymax,dely,winxmin,winxmax,winymin,winymax
 
 def makeWin(width,height,winxmin,winxmax,winymin,winymax):
-    win=GraphWin("Lagrange-Charlie Hoffmann",width,height)
+    win=GraphWin("Lagrange-Charley Hoffmann",width,height)
     win.setCoords(winxmin,winymin,winxmax,winymax)
     win.setBackground("ivory")
     return win

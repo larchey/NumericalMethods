@@ -65,7 +65,7 @@ def simpsons(f,a,b,n):
 
 
 
-print("Charlie Hoffmann Numerical Integration");
+print("Charley Hoffmann Numerical Integration");
 f=input("Input a function: ")
 a=eval(input("Input the Endpoint A: "))
 b=eval(input("Input the Endpoint B: "))

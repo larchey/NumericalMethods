@@ -20,6 +20,6 @@ def subset(a):
     
 
 
-print("Charlie Hoffmann Next Subset Algorithm");
+print("Charley Hoffmann Next Subset Algorithm");
 a=str(input("Enter a string of 1's and 0's(ex. '1110011') "));
 subset(a);

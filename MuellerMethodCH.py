@@ -54,7 +54,7 @@ def bis(f,x0,x1,x2,t,i,k):
 
 i=0;
 k=1000
-print("Charlie Hoffmann MuellerMethod");
+print("Charley Hoffmann MuellerMethod");
 f=input("Input a function of x: ")
 a=eval(input("First Estimate: "))
 b=eval(input("Second Estimate: "))

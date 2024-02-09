@@ -26,7 +26,7 @@ def bis(f,a,b,t,i):
 
 
 i=0;
-print("Charlie Hoffmann SecantMethod");
+print("Charley Hoffmann SecantMethod");
 f=input("Input a function of x: ")
 a=eval(input("Left Endpoint: "))
 b=eval(input("Right Endpoint: "))

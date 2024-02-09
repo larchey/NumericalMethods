@@ -26,7 +26,7 @@ def newton(f, df, x, tol):
 
 
 
-print("Charlie Hoffmann NewtonsMethod");
+print("Charley Hoffmann NewtonsMethod");
 f=input("Input a function of x where x<=a: ")
 df=input("Input the derivative a function of x where x<=a: ")
 g=input("Input a function of x where x>a: ")
