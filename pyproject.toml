@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "numerical-methods"
+description = "Root finding, curve fitting and integration techniques in Python"
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["version"]
+
+[project.optional-dependencies]
+plot = ["matplotlib"]
+test = ["pytest"]
+
+[project.scripts]
+numerical-methods = "numerical_methods.cli:main"
+
+[tool.setuptools]
+packages = ["numerical_methods"]
+
+[tool.setuptools.dynamic]
+version = { attr = "numerical_methods.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,23 +1,52 @@
 # NumericalMethods
-Various root finding, curve fitting, and integration techniques programmed in python 
 
-BaseCH : converts a number in base 10 to any base
+Root finding, curve fitting and integration techniques programmed in Python.
 
-NextSubsetCH: Finds the next binary number
+Needs Python 3.10 or newer. There are no other requirements, except
+matplotlib if you want graphs.
 
-FunctionIterCH: Iterates a function recursively depending on the number given
+## Usage
 
-LagrangeCH : Computes and graphs a lagrange polynomial from a given dataset
+    git clone https://github.com/larchey/NumericalMethods.git
+    cd NumericalMethods
+    python -m numerical_methods --help
 
-MuellerMethodCH: Finds roots of a given polynomial using Muellers Method
+To install the `numerical-methods` command, with graphs:
 
-NewtonsMethod: Finds roots of a given polynomial using newtons method
+    pip install ".[plot]"
 
-SecMethodCH: Finds roots of a given polynomial using secant method
+| Command | What it does | Example |
+| --- | --- | --- |
+| `bisection` | root by halving an interval | `bisection "x**3-x-1" 1 2` |
+| `newton` | root using the derivative | `newton "x**2-2" "2*x" 1` |
+| `newton-piecewise` | Newton's method on a function in two pieces | `newton-piecewise "x+1" 1 "x-5" 1 0 2` |
+| `secant` | root from two estimates | `secant "cos(x)-x" 0 1` |
+| `mueller` | real or complex root from three estimates | `mueller "x**2+1" 0 1 2` |
+| `integrate` | left, right, trapezoid and Simpson's rules | `integrate "sin(x)" 0 pi 100` |
+| `lagrange` | Lagrange polynomial through points | `lagrange 0,0 1,1 2,4 --at 3 --plot` |
+| `divided-difference` | Newton divided difference polynomial | `divided-difference 0,0 1,1 2,4 --save graph.png` |
+| `to-base`, `from-base` | convert between decimal and bases 2 to 36 | `to-base 255 16` |
+| `next-subset` | next binary string | `next-subset 1011` |
+| `bubble-sort` | sort, showing each swap | `bubble-sort 3 1 2` |
+| `iterate` | apply a function repeatedly | `iterate "cos(x)" 1 20` |
 
-BisectionMethodCH: Finds zeroes of a polynomial using bisection method
+Root finders print every estimate and accept `--tol`, `--max-iter` and
+`--quiet`.
 
-DDCH : Create a Newton’s Divided Difference Interpolatory Polynomial from points that are input, then graphs the polynomial
+Functions are written in terms of `x`, with `+ - * / // %`, `**` or `^` for
+powers, the constants `pi`, `e` and `tau`, and `sqrt exp log log2 log10 abs
+floor ceil` plus the trigonometric and hyperbolic functions and their inverses.
+They are parsed rather than passed to `eval`, so they cannot run other code.
 
-NumericalIntegrationCH: Finds integral of a polynomial using right, left, simsons, and trapezoid methods
+The methods can also be imported:
 
+```python
+from numerical_methods.roots import bisection
+
+bisection(lambda x: x**2 - 2, 0, 2).root
+```
+
+## Tests
+
+    pip install ".[plot,test]"
+    pytest
